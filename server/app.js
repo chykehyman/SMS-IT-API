@@ -3,16 +3,20 @@ import bodyParser from 'body-parser';
 import logger from 'morgan';
 import compression from 'compression';
 import dotenv from 'dotenv';
+import mongodbConfig from './config';
 
 dotenv.config();
 
 const app = express();
-const port = parseInt(process.env.PORT, 10) || 4000;
+const env = process.env.NODE_ENV || 'development';
+const port = env === 'test' ? 4001 : parseInt(process.env.PORT, 10) || 4000;
 
 app.use(compression());
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+
+mongodbConfig(env);
 
 app.get('/api/v1', (_, response) => {
   response.json({

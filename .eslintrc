@@ -1,0 +1,58 @@
+{
+  "extends": [
+    "airbnb",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import"
+  ],
+  "env": {
+    "node": true,
+    "es6": true,
+    "browser": true,
+    "mocha": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "arrowFunction": true
+    }
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ],
+    "import/prefer-default-export": 0,
+    "comma-dangle": [
+      "error",
+      {
+        "functions": "ignore"
+      }
+    ],
+    "no-param-reassign": "off",
+    "no-shadow": "off",
+    "import/no-named-as-default": "off",
+    "no-console": 1,
+    "no-debugger": 1,
+    "no-var": 1,
+    "semi": [
+      1,
+      "always"
+    ],
+    "no-trailing-spaces": 0,
+    "eol-last": 0,
+    "no-unused-vars": 0,
+    "no-underscore-dangle": 0,
+    "no-alert": 0,
+    "no-lone-blocks": 0,
+    "import/no-unresolved": 0
+  }
+}

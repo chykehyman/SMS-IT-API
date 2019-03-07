@@ -1,0 +1,30 @@
+{
+  "name": "sms-it-api",
+  "version": "1.0.0",
+  "main": "app.js",
+  "repository": "https://github.com/chykehyman/SMS-IT-API.git",
+  "author": "Chinwoke Hyginus",
+  "license": "MIT",
+  "scripts": {
+    "start:dev": "nodemon --exec babel-node -- server/app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.3",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/register": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.15.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4"
+  }
+}

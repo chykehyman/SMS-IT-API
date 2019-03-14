@@ -1,6 +1,6 @@
 import { Schema, model } from 'mongoose';
 
-const SMSschema = new Schema({
+const SmsSchema = new Schema({
   message: {
     type: String,
     trim: true,
@@ -10,15 +10,10 @@ const SMSschema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'contact'
   },
-  receiver: {
+  recipient: {
     type: Schema.Types.ObjectId,
     ref: 'contact'
-  },
-  status: {
-    type: String,
-    enum: ['SENT', 'RECEIVED'],
-    default: 'SENT'
   }
 });
 
-export default model('sms', SMSschema);
+export default model('sms', SmsSchema);

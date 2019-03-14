@@ -4,6 +4,7 @@ import logger from 'morgan';
 import compression from 'compression';
 import dotenv from 'dotenv';
 import mongodbConfig from './config';
+import routes from './routes/index';
 
 dotenv.config();
 
@@ -24,6 +25,8 @@ app.get('/api/v1', (_, response) => {
     message: 'Welcome to the SMS-IT API'
   });
 });
+
+app.use('/api/v1', routes);
 
 app.all('*', (_, response) => {
   response.status(404).json({

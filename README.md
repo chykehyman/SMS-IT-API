@@ -1,3 +1,4 @@
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/hyperium/hyper/master/LICENSE)
 # SMS-IT-API
 This is a basic API built to facilitate sending and receiving of sms by users.
 

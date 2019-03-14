@@ -6,15 +6,20 @@
   "author": "Chinwoke Hyginus",
   "license": "MIT",
   "scripts": {
-    "start:dev": "nodemon --exec babel-node -- server/app.js"
+    "start": "node build/server/app.js",
+    "start:dev": "nodemon --exec babel-node -- server/app.js",
+    "start:prod": "yarn build:prod && yarn start",
+    "build:prod": "rm -rf build/server && export NODE_ENV=production && babel server -d build/server"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
     "compression": "^1.7.3",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
+    "is-empty": "^1.2.0",
     "mongoose": "^5.4.17",
-    "morgan": "^1.9.1"
+    "morgan": "^1.9.1",
+    "validator": "^10.11.0"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
